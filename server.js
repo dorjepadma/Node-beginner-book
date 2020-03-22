@@ -9,7 +9,8 @@ function onRequest(request, response) {
   route(handle, pathname);
 
     response.writeHead(200, { 'Content-Type': 'text/plain' });
-    response.write('Hello World');
+    let content = route(handle, pathname)
+    response.write(content);
     response.end();
 }
 
